@@ -1,5 +1,5 @@
 const mainBtn = document.getElementById("btn");
-let errori = 0
+let errori = 0;
 
 mainBtn.addEventListener("click", function () {
     const userAge = document.getElementById("age").value;
