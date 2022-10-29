@@ -8,17 +8,59 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
 <body class="bg-dark">
-    <div class="container p-5 mt-5 m-auto text-white">
-        <div class="p-3">
-            <h5>Età</h5>
-            <input type="text" id="age">
+    <!-- Calcolo prezzo biglietto -->
+    <div>
+        <h2 class="text-center text-white p-2 mt-5">CALCOLA IL PREZZO DEL BIGLIETTO</h2>
+    </div>
+    <div class="container p-5 mt-3 m-auto text-white bg-primary rounded-3">
+        <div class="row">
+            <div class="col p-3">
+                <h5>Nome Passeggero</h5>
+                <input type="text" id="name">
+            </div>
+            <div class="col p-3">
+                <h5>Età</h5>
+                <input type="text" id="age">
+            </div>
+            <div class="col p-3">
+                <h5>KM da percorrere</h5>
+                <input type="text" id="km">
+            </div>
         </div>
-        <div class="p-3">
-            <h5>KM da percorrere</h5>
-            <input type="text" id="km">
+        <div class="pt-4 text-center">
+            <button id="btn" class="btn btn-light mx-2 px-3">Genera</button>
+            <button id="btn2" class="btn btn-light mx-2 px-3">Annulla</button>
         </div>
-        <div class="p-3">
-            <button id="btn">Genera</button>
+    </div>
+    <!-- Il tuo biglietto -->
+    <div class="pt-5">
+        <h2 class="text-center text-white">IL TUO BIGLIETTO</h2>
+    </div>
+    <div class="container p-5 mt-3 m-auto text-white bg-primary rounded-3">
+        <div class="pb-2">
+            <h4>DETTAGLIO PASSEGGERI</h4>
+        </div>
+        <div class="row border-top border-bottom">
+            <div class="col bg-secondary">
+                <h5 class="pt-3 pb-5">Nome passeggero</h5>
+                <p>name</p>
+            </div>
+            <div class="col">
+                <h5 class="pt-3 pb-5">Offerta</h5>
+                <p>offert</p>
+            </div>
+            <div class="col">
+                <h5 class="pt-3 pb-5">Carrozza</h5>
+                <p>car</p>
+            </div>
+            <div class="col">
+                <h5 class="pt-3 pb-5">Codice CP</h5>
+                <p>cp</p>
+            </div>
+            <div class="col">
+                <h5 class="pt-3 pb-5">Costo biglietto</h5>
+                <p>total</p>
+            </div>
         </div>
     </div>
     <script src="js/main.js"></script>

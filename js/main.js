@@ -3,12 +3,14 @@ let errori = 0;
 
 mainBtn.addEventListener("click", function () {
     const userAge = document.getElementById("age").value;
+    console.log(userAge);
     if (isNaN(userAge)) {
         alert("L'età inserita non è valida");
         errori += 1;
     }
 
     const userKm = document.getElementById("km").value;
+    console.log(userKm);
     if (isNaN(userKm)) {
         alert("I KM inseriti non sono validi");
         errori += 1;
