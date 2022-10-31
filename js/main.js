@@ -5,7 +5,7 @@ let errori = 0;
 buttonGenera.addEventListener("click", function () {
     const userKm = document.getElementById("km").value;
     if (isNaN(userKm)) {
-        alert("I KM inseriti non sono validi.");
+        alert("I Km inseriti non sono validi.");
         errori += 1;
     }
 
@@ -43,7 +43,7 @@ buttonGenera.addEventListener("click", function () {
         offert.innerHTML = `40%`
         tot.innerHTML = `${prezzoScontato} &#x20AC;`;
     } else {
-        console.log(`Il prezzo totale del biglietto è ${prezzoBase}`);
+        console.log(`Il prezzo totale del biglietto è ${(prezzoBase).toFixed(2)}`);
         offert.innerHTML = `Biglietto Standard`
         tot.innerHTML = `${prezzoBase.toFixed(2)} &#x20AC;`;
     }

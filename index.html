@@ -6,68 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-biglietto-treno-form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-dark">
+<body class="body-bg">
+    <!-- NavBar -->
+    <header class="my-header bg-dark">
+        <div class="container-fluid py-0 ps-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <div class="nav-left d-flex gap-3">
+                    <div class="my-logo pe-3">
+                        <img src="img/channels4_profile.jpg" alt="">
+                        <span class="fw-bold text-white" href="#">BOOLEANTRAIN</span>
+                    </div>
+                    <div class="d-none d-lg-flex align-items-center px-2">
+                        <ul class="nav d-flex gap-3">
+                            <li class="nav-item nav-h">
+                                <a class="fw-semibold" href="#">Home</a>
+                            </li>
+                            <li class="nav-item nav-h">
+                                <a class="fw-semibold" href="#">Treni</a>
+                            </li>
+                            <li class="nav-item nav-h">
+                                <a class="fw-semibold" href="#">Offerte</a>
+                            </li>
+                            <li class="nav-item nav-h">
+                                <a class="fw-semibold" href="#">Servizi</a>
+                            </li>
+                            <li class="nav-item nav-h">
+                                <a class="fw-semibold" href="#">Lavora con noi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-right d-flex align-items-center">
+                    <div class="d-lg-none">
+                        <div class="nav-img-h">
+                            <a href="#">
+                                <img class="img-fluid border p-2 rounded" src="img/burger-menu.png" alt="" style="width: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-flex">
+                        <ul class="nav d-flex align-items-center gap-3">
+                            <li class="nav-item nav-h">
+                                <a class="fw-semibold" href="#">Info e Assistenza</a>
+                            </li>
+                            <li class="nav-item"><button class="btn btn-primary rounded-5">Accedi</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
     <!-- Calcolo prezzo biglietto -->
-    <div>
-        <h2 class="text-center text-white p-2 mt-5">CALCOLA IL PREZZO DEL BIGLIETTO</h2>
-    </div>
-    <div class="container p-5 mt-3 m-auto text-white bg-primary rounded-3">
-        <div class="row">
-            <div class="col p-3">
-                <h5>Nome Passeggero</h5>
-                <input type="text" id="name">
+    <main>
+        <div>
+            <h2 class="text-center text-dark p-2 mt-5">CALCOLA IL PREZZO DEL BIGLIETTO</h2>
+        </div>
+        <div class="container mb-3 p-5 mt-3 m-auto text-white bg-primary rounded-3">
+            <div class="row">
+                <div class="col-12 col-md-4 p-3">
+                    <h5>Nome Passeggero</h5>
+                    <input type="text" id="name">
+                </div>
+                <div class="col-12 col-md-4 p-3">
+                    <h5>Km da percorrere</h5>
+                    <input type="text" id="km">
+                </div>
+                <div class="col-12 col-md-4 p-3">
+                    <h5>Fascia d'età</h5>
+                    <select id="age" class="p-1">
+                        <option value=""></option>
+                        <option value="0">Maggiorenne</option>
+                        <option value="20">Minorenne</option>
+                        <option value="40">Over 65</option>
+                    </select>
+                </div>
             </div>
-            <div class="col p-3">
-                <h5>KM da percorrere</h5>
-                <input type="text" id="km">
-            </div>
-            <div class="col p-3">
-                <h5>Fascia d'età</h5>
-                <select id="age" class="p-1">
-                    <option value=""></option>
-                    <option value="0">Maggiorenne</option>
-                    <option value="20">Minorenne</option>
-                    <option value="40">Over 65</option>
-                </select>
+            <div class="pt-4 text-md-center">
+                <button id="btnGenera" class="d-block d-md-inline-block btn btn-light mb-4 mb-md-0 mx-sm-2 px-sm-3">Genera</button>
+                <button id="btnAnnulla" class="d-block d-md-inline-block btn btn-light mx-sm-2 px-sm-3">Annulla</button>
             </div>
         </div>
-        <div class="pt-4 text-center">
-            <button id="btnGenera" class="btn btn-light mx-2 px-3">Genera</button>
-            <button id="btnAnnulla" class="btn btn-light mx-2 px-3">Annulla</button>
+        <!-- Il tuo biglietto -->
+        <div class="pt-5">
+            <h2 class="text-center text-dark">IL TUO BIGLIETTO</h2>
         </div>
-    </div>
-    <!-- Il tuo biglietto -->
-    <div class="pt-5">
-        <h2 class="text-center text-white">IL TUO BIGLIETTO</h2>
-    </div>
-    <div class="container p-5 mt-3 m-auto text-white bg-primary rounded-3">
-        <div class="pb-2">
-            <h4>DETTAGLIO PASSEGGERI</h4>
-        </div>
-        <div class="row border-top border-bottom">
-            <div class="col bg-secondary">
-                <h5 class="pt-3 pb-5">Nome passeggero</h5>
-                <p id="fullName" class="fw-bold"></p>
+        <div class="container mb-5 p-5 mt-3 m-auto text-white bg-primary rounded-3">
+            <div class="pb-2">
+                <h4>DETTAGLIO PASSEGGERI</h4>
             </div>
-            <div class="col">
-                <h5 class="pt-3 pb-5 ps-2">Offerta</h5>
-                <p id="offert" class="fw-semibold fst-italic ps-2"></p>
-            </div>
-            <div class="col">
-                <h5 class="pt-3 pb-5">Carrozza</h5>
-                <p id="car" class="fw-semibold fst-italic ps-4"></p>
-            </div>
-            <div class="col">
-                <h5 class="pt-3 pb-5">Codice CP</h5>
-                <p id="cp" class="fw-semibold fst-italic ps-3"></p>
-            </div>
-            <div class="col">
-                <h5 class="pt-3 pb-5">Costo biglietto</h5>
-                <p id="tot" class="fw-bold ps-4"></p>
+            <div class="row border-top border-bottom">
+                <div class="col-12 col-md bg-dark border-top border-bottom border-md-0">
+                    <h5 class="pt-3 pb-5">Nome passeggero</h5>
+                    <p id="fullName" class="fw-bold"></p>
+                </div>
+                <div class="col-12 col-md bg-secondary border-top border-bottom border-md-0">
+                    <h5 class="pt-3 pb-5 ps-2">Offerta</h5>
+                    <p id="offert" class="fw-semibold fst-italic ps-2"></p>
+                </div>
+                <div class="col-12 col-md bg-secondary border-top border-bottom border-md-0">
+                    <h5 class="pt-3 pb-5">Carrozza</h5>
+                    <p id="car" class="fw-semibold fst-italic ps-4"></p>
+                </div>
+                <div class="col-12 col-md bg-secondary border-top border-bottom border-md-0">
+                    <h5 class="pt-3 pb-5">Codice CP</h5>
+                    <p id="cp" class="fw-semibold fst-italic ps-3"></p>
+                </div>
+                <div class="col-12 col-md bg-secondary border-top border-bottom border-md-0">
+                    <h5 class="pt-3 pb-5">Costo biglietto</h5>
+                    <p id="tot" class="fw-bold ps-4"></p>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <!-- FooterBar -->
+    <footer class="bg-info text-white pb-3">
+        <div class="container pt-3 p-2">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center fw-semibold fst-italic text-decoration-underline">Copyright &#169; Your Class #79 BooleanTrain 2022&#xae;</div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

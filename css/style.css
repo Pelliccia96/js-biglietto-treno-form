@@ -1,0 +1,59 @@
+body.body-bg {
+    background-image: url(../img/img-1096420.png);
+}
+
+header.my-header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+}
+
+header li {
+    margin: 0 0.5rem;
+}
+
+header .my-logo {
+    background-color: #001534;
+}
+
+header .my-logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+header nav .nav-h:hover {
+    background-color: lightgray;
+    scale: 1.2;
+    border-radius: 15px;
+    color: var(--bs-primary);
+    padding: 0 0.5rem;
+}
+
+.nav-img-h:hover {
+    scale: 1.3;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
