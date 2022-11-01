@@ -46,9 +46,11 @@ buttonGenera.addEventListener("click", function () {
         console.log(`Il prezzo totale del biglietto è ${(prezzoBase).toFixed(2)}`);
         offert.innerHTML = `Biglietto Standard`
         tot.innerHTML = `${prezzoBase.toFixed(2)} &#x20AC;`;
-    }
+    }  
 })
 
 buttonAnnulla.addEventListener("click", function() {
+    const myDisplay = document.querySelector(".myDisplay");
+    myDisplay.classList.toggle("d-none");
     alert("Ricaricare la pagina e Rinserire i dati.");
 })
