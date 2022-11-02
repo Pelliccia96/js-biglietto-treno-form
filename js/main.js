@@ -50,7 +50,9 @@ buttonGenera.addEventListener("click", function () {
 })
 
 buttonAnnulla.addEventListener("click", function() {
-    const myDisplay = document.querySelector(".myDisplay");
-    myDisplay.classList.toggle("d-none");
-    alert("Ricaricare la pagina e Rinserire i dati.");
+    fullName.innerHTML = "";
+    offert.innerHTML = "";
+    car.innerHTML = "";
+    cp.innerHTML = "";
+    tot.innerHTML = "";
 })
